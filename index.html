@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .container button {
+        width: 20%;
+        color: white;
+        font-size: large;
+        padding: 2%;
+        border-radius: 5%;
+        background-color: transparent;
+      }
+      #otp {
+        display: flex;
+        position: absolute;
+        color: rgb(37, 91, 156);
+        background-color:transparent;
+        font-size: x-large;
+        font-weight: 20px;
+      }
+      .container img {
+        position: relative;
+        background-color: transparent;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OTP</title>
+  </head>
+  <body>
+    <div class="container">
+      <img
+        src="../whatsapp/whatsapp/assets/BCCI-Logo.jpg"
+        width="300"
+        height="300"
+      />
+      <div id="otp"></div>
+      <button onclick="Generetor()">Clickme</button>
+    </div>
+    <script>
+      function Generetor() {
+        document.getElementById("otp").innerText =
+          Math.ceil(Math.random() * 1000000) - 1;
+        randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        document.body.style.backgroundColor = "#" + randomColor;
+        
+        
+        let arr=["abhi","Chai","sunil","satya","raghu"]
+        arr.random();
+        console.log(arr)
+
+      }
+    </script>
+  </body>
+</html>
